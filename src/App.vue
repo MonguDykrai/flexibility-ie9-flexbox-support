@@ -8,6 +8,24 @@
   </div>
 </template>
 
+<script>
+import flexibility from "flexibility";
+
+export default {
+  name: "App",
+  data: function() {
+    return {
+      centerXY:
+        "display: flex; width: 600px; height: 80px; align-items: center; justify-content: center;"
+    };
+  },
+  mounted: function() {
+    flexibility(document.body);
+  }
+};
+</script>
+
+
 <style lang="scss">
 // #app {
 //   font-family: "Avenir", Helvetica, Arial, sans-serif;

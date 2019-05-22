@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import flexibility from "flexibility";
+// import flexibility from "flexibility";
 
 export default {
-  name: "home",
-  data: function() {
-    return {
-      centerXY:
-        "display: flex; width: 600px; height: 80px; align-items: center; justify-content: center;"
-    };
-  },
-  mounted: function() {
-    flexibility(document.body);
-  }
+//   name: "home",
+//   data: function() {
+//     return {
+//       centerXY:
+//         "display: flex; width: 600px; height: 80px; align-items: center; justify-content: center;"
+//     };
+//   },
+//   mounted: function() {
+//     flexibility(document.body);
+//   }
 };
 </script>
   }
