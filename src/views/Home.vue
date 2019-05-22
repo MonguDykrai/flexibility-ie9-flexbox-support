@@ -1,6 +1,74 @@
 <template>
   <div class="home">
     <section>
+      <h3>justify-content: space-around</h3>
+      <div class="wrap" data-style="display: flex; width: 600px; justify-content: space-around;">
+        <span class="item">a1</span>
+        <span class="item">a3</span>
+        <span class="item">a3</span>
+      </div>
+      <div class="wrap" data-style="display: flex; width: 600px; justify-content: space-around;">
+        <span class="item" data-style="width: 250px">a1; width: 250px</span>
+        <span class="item" data-style="width: 250px">a2; width: 250px</span>
+        <span class="item" data-style="width: 250px">a3; width: 250px</span>
+      </div>
+      <div class="wrap" data-style="display: flex; width: 600px; justify-content: space-around;">
+        <span class="item" data-style="flex-basis: 250px">a1; flex-basis: 250px</span>
+        <span class="item" data-style="flex-basis: 250px">a2; flex-basis: 250px</span>
+        <span class="item" data-style="flex-basis: 250px">a3; flex-basis: 250px</span>
+      </div>
+      <div
+        class="wrap"
+        data-style="display: flex; width: 600px; height: 100px; justify-content: space-around;"
+      >
+        <span class="item" data-style="width: 250px">a1; width: 250px</span>
+        <span class="item" data-style="width: 250px">a2; width: 250px</span>
+        <span class="item" data-style="width: 250px">a3; width: 250px</span>
+      </div>
+      <div
+        class="wrap"
+        data-style="display: flex; width: 600px; height: 100px; flex-wrap: wrap; justify-content: space-around;"
+      >
+        <span class="item" data-style="width: 250px">a1; width: 250px</span>
+        <span class="item" data-style="width: 250px">a2; width: 250px</span>
+        <span class="item" data-style="width: 250px">a3; width: 250px</span>
+      </div>
+      <div
+        class="wrap"
+        data-style="display: flex; width: 600px; height: 100px; align-content: space-around; flex-wrap: wrap; justify-content: space-around;"
+      >
+        <span class="item" data-style="width: 250px">width: 250px</span>
+        <span class="item" data-style="width: 250px">width: 250px</span>
+        <span class="item" data-style="width: 250px">width: 250px</span>
+      </div>
+      <div
+        class="wrap"
+        data-style="display: flex; width: 600px; height: 100px; align-content: flex-end; align-items: center; flex-wrap: wrap; justify-content: space-around;"
+      >
+        <span class="item" data-style="width: 250px; height: 30px">width: 250px; height: 30px</span>
+        <span class="item" data-style="width: 250px">width: 250px</span>
+        <span class="item" data-style="width: 250px">width: 250px</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>flex-grow: 1</h3>
+      <div class="wrap" data-style="display: flex; width: 600px;">
+        <span class="item">item</span>
+        <span class="item" data-style="flex-grow: 1">flex-grow: 1</span>
+      </div>
+      <div class="wrap" data-style="display: flex; width: 600px;">
+        <span class="item" data-style="flex-grow: 1">flex-grow: 1</span>
+        <span class="item" data-style="flex-grow: 1">flex-grow: 1</span>
+      </div>
+      <div class="wrap" data-style="display: flex; width: 600px;">
+        <span class="item" data-style="flex-grow: 1">flex-grow: 1</span>
+        <span class="item" data-style="flex-grow: 3">flex-grow: 3</span>
+        <span class="item" data-style="flex-grow: 1">flex-grow: 1</span>
+      </div>
+    </section>
+
+    <section>
       <h3>margin: auto</h3>
       <div class="wrap" data-style="display: flex; width: 600px; justify-content: flex-start;">
         <span class="item" data-style="margin-left: auto;margin-right: auto;">margin: 0 auto</span>
@@ -51,6 +119,22 @@
         <span class="item">item</span>
       </div>
     </section>
+
+    <section>
+      <h3>order: 1</h3>
+      <div class="wrap" data-style="display: flex; width: 600px">
+        <span class="item" data-style="order: 1;">order: 1</span>
+        <span class="item">order: 0</span>
+      </div>
+    </section>
+
+    <section>
+      <h3>align-items: center; justify-content: center</h3>
+      <div class="wrap" :data-style="centerXY">
+        <span class="item">item</span>
+        <span class="item">item</span>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -59,6 +143,12 @@ import flexibility from "flexibility";
 
 export default {
   name: "home",
+  data: function() {
+    return {
+      centerXY:
+        "display: flex; width: 600px; height: 80px; align-items: center; justify-content: center;"
+    };
+  },
   mounted: function() {
     // setTimeout(function() {
     flexibility(document.body);
@@ -72,6 +162,6 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  display: flex;
+  // display: flex;
 }
 </style>
