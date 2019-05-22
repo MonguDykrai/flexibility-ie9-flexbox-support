@@ -8,20 +8,6 @@
   </div>
 </template>
 
-<script>
-import flexibility from "flexibility";
-
-export default {
-  mounted: function() {
-    // console.log(flexibility);
-    // console.log(document.documentElement);
-
-    flexibility(document.documentElement);
-  }
-};
-</script>
-
-
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
