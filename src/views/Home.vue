@@ -16,3 +16,9 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.home {
+  display: flex;
+}
+</style>
